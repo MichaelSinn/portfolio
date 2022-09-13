@@ -1,9 +1,18 @@
+:root{
+    --main-colour: #202C39;
+    --secondary-colour: #283845;
+    --alt-colour: #B8B08D;
+    --accent-colour: #f2d492;
+    --secondary-accent-colour: #f29559;
+}
+
 *{
     box-sizing: border-box;
 }
 
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--main-colour);
 }
 
 h1{
@@ -11,19 +20,18 @@ h1{
     padding-bottom: 12px;
 }
 
-header, footer{
-    background-color: antiquewhite;
-    width: 100%;
-    padding: 20px;
-    padding-bottom: 10px;
-}
-
-body{
-    background-color: aliceblue;
+h3{
+    font-weight: 700;
 }
 
 a:hover{
-    text-decoration: underline;
+    color: var(--accent-colour);
+}
+
+header, footer{
+    color: var(--secondary-colour);
+    background-color: var(--alt-colour);
+    padding: 20px 20px 10px 20px;
 }
 
 nav ul li:not(:last-child){
@@ -39,50 +47,42 @@ section{
     margin-bottom: 50px;
 }
 
-img{
-    width: 100%;
-}
-
-.hero-project .project-card{
+.hero-project .project-card, img, header, footer{
     width: 100%;
 }
 
 .project-card{
     position: relative;
     margin: 15px;
+    cursor: pointer;
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+}
+
+.popup, .project-card-name{
+    display: none;
+    position: absolute;
+    padding: 5px 10px;
+    background-color: var(--secondary-accent-colour);
 }
 
 .project-card-name{
-    display: none;
-    position: absolute;
-    left: 10px;
-    top: 20px;
+    left: 0;
+    top: 50px;
     font-size: 1.5em;
     font-weight: 700;
-    cursor: pointer;
-}
-
-.hero-project .project-card-name{
-    position: absolute;
-    left: 20px;
-    top: 40px;
-    font-size: 3em;
+    border-radius: 0 15px 15px 0;
 }
 
 .popup{
-    display: none;
-    background-color: rgb(169, 234, 243);
     border-radius: 10px 0 0 0;
-    padding: 5px 10px;
-    transition: 50ms;
-    cursor: pointer;
+    bottom: 0;
+    right: 0;
 }
 
 .project-card:hover .popup{
     display: inline-block;
-    position: absolute;
-    bottom: 6px;
-    right: 0;
 }
 
 .project-card:hover .project-card-name{
@@ -101,15 +101,23 @@ img{
     line-height: 1.25em;
 }
 
-.sub-projects{
-    max-width: 990px;
+.hero-project .project-card-name{
+    font-size: 3em;
+    padding: 20px 30px;
 }
 
 .hero-project .project-card a img{
+    height: 600px;
+}
+
+.hero-project .project-card{
     width: 100%;
     height: 600px;
 }
 
+.sub-projects{
+    max-width: 990px;
+}
 
 .avatar{
     width: 200px;

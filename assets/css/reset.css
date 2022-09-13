@@ -44,6 +44,10 @@ a{
 	color: inherit;
 }
 
+a:hover{
+    text-decoration: underline;
+}
+
 ol, ul {
 	list-style: none;
 }
