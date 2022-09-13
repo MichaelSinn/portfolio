@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    font-size: 3em;
+    padding-bottom: 12px;
+}
+
+header, footer{
+    background-color: antiquewhite;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 10px;
+}
+
+body{
+    background-color: aliceblue;
+}
+
+nav ul li:not(:last-child){
+    margin-right: 2em;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+}
+
+.hero-project .project-card{
+    width: 100%;
+}
+
+.hero-project{
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-project .project-card a img{
+    width: 100%;
+    height: 300px;
+}
+
+.sub-project{
+
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
