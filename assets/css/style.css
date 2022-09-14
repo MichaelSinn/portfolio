@@ -140,6 +140,21 @@ section{
     max-width: 600px;
 }
 
+.contact-list{
+    line-height: 3em;
+}
+
+.contact-list li a{
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+}
+
 .row{
     display: flex;
     flex-direction: row;
