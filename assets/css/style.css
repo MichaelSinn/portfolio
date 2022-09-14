@@ -1,3 +1,5 @@
+/* Variable declaration */
+
 :root{
     --main-colour: #202C39;
     --secondary-colour: #283845;
@@ -6,13 +8,23 @@
     --secondary-accent-colour: #f29559;
 }
 
+/* || Universal selectors */
+
 *{
     box-sizing: border-box;
 }
 
+/* || Element selectors */
+
 html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--main-colour);
+}
+
+header, footer{
+    color: var(--secondary-colour);
+    background-color: var(--alt-colour);
+    padding: 20px 20px 10px 20px;
 }
 
 h1{
@@ -31,22 +43,27 @@ h1::before{
     left: -20px;
 }
 
-h3{
+h2{
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+h4{
     font-weight: 700;
+}
+
+nav ul li:not(:last-child){
+    margin-right: 2em;
 }
 
 a:hover{
     color: var(--accent-colour);
 }
 
-header, footer{
-    color: var(--secondary-colour);
-    background-color: var(--alt-colour);
-    padding: 20px 20px 10px 20px;
-}
-
-nav ul li:not(:last-child){
-    margin-right: 2em;
+section{
+    margin-bottom: 50px;
 }
 
 footer{
@@ -54,11 +71,21 @@ footer{
     bottom: 0;
 }
 
-section{
-    margin-bottom: 50px;
+/* || Class selectors */
+
+.row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
-.hero-project .project-card, img, header, footer{
+.column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-project .project-card, img, header, footer{ /* Setting elements that should take up their entire container */
     width: 100%;
 }
 
@@ -68,7 +95,6 @@ section{
     cursor: pointer;
     width: 300px;
     height: 300px;
-    background-color: blue;
 }
 
 .popup, .project-card-name{
@@ -76,14 +102,6 @@ section{
     position: absolute;
     padding: 5px 10px;
     background-color: var(--secondary-accent-colour);
-}
-
-.project-card-name{
-    left: 0;
-    top: 50px;
-    font-size: 1.5em;
-    font-weight: 700;
-    border-radius: 0 15px 15px 0;
 }
 
 .popup{
@@ -96,12 +114,20 @@ section{
     display: inline-block;
 }
 
+.project-card-name{
+    left: 0;
+    top: 50px;
+    font-size: 1.5em;
+    font-weight: 700;
+    border-radius: 0 15px 15px 0;
+}
+
 .project-card:hover .project-card-name{
     display: inline-block;
 }
 
 .hero-project{
-    width: 80%;
+    width: 1200px;
     justify-content: center;
 }
 
@@ -117,12 +143,7 @@ section{
     padding: 20px 30px;
 }
 
-.hero-project .project-card a img{
-    height: 600px;
-}
-
-.hero-project .project-card{
-    width: 100%;
+.hero-project .project-card, .hero-project .project-card a img{
     height: 600px;
 }
 
@@ -131,7 +152,7 @@ section{
 }
 
 .avatar{
-    width: 200px;
+    max-width: 200px;
     border-radius: 50%;
     margin-bottom: 30px;
 }
@@ -155,14 +176,30 @@ section{
     margin-right: 16px;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+/* Media queries */
+
+@media screen and (max-width: 992px){
+    .hero-project .project-card, .hero-project .project-card a img{
+        height: 450px;
+        width: 900px;
+    }
+
+    .sub-projects{
+        flex-direction: column;
+    }
+
+    body{
+        font-size: 12px;
+    }
 }
 
-.column{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width: 768px){
+    .hero-project .project-card, .hero-project .project-card a img{
+        height: 350px;
+        width: 700px;
+    }
+
+    body{
+        font-size: 8px;
+    }
 }
