@@ -127,7 +127,7 @@ footer{
 }
 
 .hero-project{
-    width: 1200px;
+    width: 75%;
     justify-content: center;
 }
 
@@ -144,6 +144,7 @@ footer{
 }
 
 .hero-project .project-card, .hero-project .project-card a img{
+    width: 100%;
     height: 600px;
 }
 
@@ -158,7 +159,7 @@ footer{
 }
 
 .about-blurb{
-    max-width: 600px;
+    max-width: 33%;
 }
 
 .contact-list{
@@ -179,27 +180,39 @@ footer{
 /* Media queries */
 
 @media screen and (max-width: 992px){
+    body{
+        font-size: 14px;
+    }
+
     .hero-project .project-card, .hero-project .project-card a img{
         height: 450px;
-        width: 900px;
     }
 
     .sub-projects{
         flex-direction: column;
     }
 
-    body{
-        font-size: 12px;
+    .hero-project .project-card-name{
+        font-size: 2.5em;
+        padding: 15px 20px;
     }
 }
 
 @media screen and (max-width: 768px){
+    body{
+        font-size: 12px;
+    }
+    
     .hero-project .project-card, .hero-project .project-card a img{
         height: 350px;
-        width: 700px;
     }
 
-    body{
-        font-size: 8px;
+    .hero-project .project-card-name{
+        font-size: 2em;
+        padding: 10px 15px;
+    }
+
+    .about-blurb{
+        max-width: 45%;
     }
 }
