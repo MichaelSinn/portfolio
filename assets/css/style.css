@@ -45,7 +45,7 @@ h1::before{
 
 h2{
     margin-top: 30px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-size: 2em;
     font-weight: 600;
 }
@@ -156,6 +156,7 @@ footer{
     max-width: 200px;
     border-radius: 50%;
     margin-bottom: 30px;
+    border: 2px solid var(--accent-colour);
 }
 
 .about-blurb{
