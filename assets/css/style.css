@@ -97,6 +97,11 @@ footer{
     height: 300px;
 }
 
+.thumbnail{
+    width: 300px;
+    height: 300px;
+}
+
 .popup, .project-card-name{
     display: none;
     position: absolute;
