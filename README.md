@@ -2,7 +2,7 @@
 
 ## Description
 
-Personal Portfolio for Michael Sinn. Michael Sinn is a junior web developer who has been programming for over a decade. The portfolio page is made to display experience with popular programming languages and frameworks such as Javascript, HTML, CSS, P5, NoSQL, Python, Flask, React, and Node.js. This page is meant as a hub with which Michael's main projects will be showcased and linked to. Contact information for Michael can be found at the bottom of the page.
+Personal Portfolio for Michael Sinn. Michael Sinn is a full stack web developer who has been programming for over a decade. The portfolio page is made to display experience with popular programming languages and frameworks such as Javascript, HTML, CSS, P5, NoSQL, Python, Flask, React, and Node.js. This page is meant as a hub with which Michael's main projects will be showcased and linked to. Contact information for Michael can be found at the bottom of the page.
 
 ## Installation
 
